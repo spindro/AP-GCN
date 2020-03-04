@@ -20,8 +20,13 @@ All the code for the models described in the paper can be found in *model.py*. A
 
 [2] Klicpera J., Bojchevski A., Günnemann S. **Predict then Propagate: Graph Neural Networks meet Personalized PageRank**. arXiv preprint arXiv:1810.05997
 
+
+[3] Fey M., Lenssen J.E. **Fast Graph Representation Learning with PyTorch Geometric**. arXiv preprint arXiv:1903.02428
+
+
 ### Acknowledgments
 
-Many thanks to the authors of [2](https://github.com/klicperajo/ppnp) for making their code public. Our repo is based on their work for a fair comparison between algorithms.
+Many thanks to the authors of [[2]](https://github.com/klicperajo/ppnp) for making their code public. Our repo is based on their work for a fair comparison between algorithms.
+Many thanks also to the maintainers [[3]](https://github.com/rusty1s/pytorch_geometric) for such an awesome open-source library.
 
 

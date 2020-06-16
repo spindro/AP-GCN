@@ -35,7 +35,7 @@ class AdaptivePropagation(MessagePassing):
         x = torch.zeros_like(local_preds).to(local_preds.device)
 
         prop = self.dropout(local_preds)
-        for i in range(0, self.niter):
+        for _ in range(self.niter):
             
             old_prop = prop
             continue_fmask = continue_mask.type('torch.FloatTensor').to(local_preds.device)
@@ -52,7 +52,7 @@ class AdaptivePropagation(MessagePassing):
             steps = steps + prob_fmask 
             sum_h = sum_h + prob_fmask * h 
 
-            final_iter = steps <= self.niter
+            final_iter = steps < self.niter
             
             condition = prob_mask & final_iter
             p = torch.where(condition, sum_h, 1-sum_h)
@@ -68,7 +68,7 @@ class AdaptivePropagation(MessagePassing):
 
         x = x / steps[:,None]
         
-        return x, (steps-1), (1-sum_h)
+        return x, steps, (1-sum_h)
 
     def message(self, x_j, norm):
         return norm.view(-1, 1) * x_j

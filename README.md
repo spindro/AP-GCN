@@ -35,10 +35,12 @@ Many thanks also to the maintainers [[3]](https://github.com/rusty1s/pytorch_geo
 Please cite [our paper](https://arxiv.org/abs/2002.10306) if you use this code in your own work:
 
 ```
-@article{spinelli2020apgcn,
-  title={Adaptive Propagation Graph Convolutional Network},
-  author={Spinelli, Indro and Scardapane, Simone and Aurelio, Uncini},
-  journal={arXiv preprint arXiv:2002.10306},
-  year={2020}
-}
+@ARTICLE{spinelli2020apgcn,
+  author={I. {Spinelli} and S. {Scardapane} and A. {Uncini}},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Adaptive Propagation Graph Convolutional Network}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-6},}
 ```
